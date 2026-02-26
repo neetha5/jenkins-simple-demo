@@ -1,7 +1,7 @@
 pipeline {
   agent any
 
-  stage{
+  stages {
 
     stage('Clone') {
       steps {
@@ -10,7 +10,7 @@ pipeline {
       }
     }
     stage('Run Script'){
-      steps{
+      steps {
         sh 'chmod +x script.sh'
         sh './script.sh'
       }
